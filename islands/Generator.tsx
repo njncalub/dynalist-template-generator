@@ -533,6 +533,25 @@ export default function Generator() {
                   </label>
                 </div>
                 <div>
+                  <label class="inline-flex items-center">
+                    <input
+                      type="checkbox"
+                      checked={options.add_quarter_overview}
+                      onChange={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        handleOptionChange(
+                          "add_quarter_overview",
+                          target.checked,
+                        );
+                      }}
+                      class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
+                    />
+                    <span class="ml-2 text-sm text-gray-700">
+                      Add Quarter Overview
+                    </span>
+                  </label>
+                </div>
+                <div>
                   <label
                     for="quarter_item_format"
                     class="block text-sm font-medium text-gray-700"
@@ -598,6 +617,25 @@ export default function Generator() {
               </legend>
               <div class="space-y-2">
                 <div>
+                  <label class="inline-flex items-center">
+                    <input
+                      type="checkbox"
+                      checked={options.add_month_overview}
+                      onChange={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        handleOptionChange(
+                          "add_month_overview",
+                          target.checked,
+                        );
+                      }}
+                      class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
+                    />
+                    <span class="ml-2 text-sm text-gray-700">
+                      Add Month Overview
+                    </span>
+                  </label>
+                </div>
+                <div>
                   <label
                     for="month_item_format"
                     class="block text-sm font-medium text-gray-700"
@@ -659,6 +697,22 @@ export default function Generator() {
                 Day Settings
               </legend>
               <div class="space-y-2">
+                <div>
+                  <label class="inline-flex items-center">
+                    <input
+                      type="checkbox"
+                      checked={options.add_day_overview}
+                      onChange={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        handleOptionChange("add_day_overview", target.checked);
+                      }}
+                      class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
+                    />
+                    <span class="ml-2 text-sm text-gray-700">
+                      Add Day Overview
+                    </span>
+                  </label>
+                </div>
                 <div>
                   <label
                     for="day_item_format"
