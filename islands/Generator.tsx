@@ -28,6 +28,11 @@ const DEFAULTS = {
 };
 
 const PRE_POPULATED_CSS = `
+.Node-self.is-contentRendered .Node-renderedContent.node-line {
+  display: flex;
+  align-items: center;
+}
+
 .node-tag[title~="##"],
 .node-tag[title~="#~"],
 .node-tag[title~="#X"],
