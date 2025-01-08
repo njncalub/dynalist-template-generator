@@ -31,6 +31,7 @@ const PRE_POPULATED_CSS = `
 .Node-self.is-contentRendered .Node-renderedContent.node-line {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .node-tag[title~="##"],
@@ -400,7 +401,7 @@ export default function Generator() {
     e.preventDefault();
     const startDate = new Date(year, 0, 1);
     const calendarOutput = generate(startDate, options);
-    setOutput(calendarOutput);
+    setOutput(calendarOutput.trim());
   };
 
   const handleOptionChange = (key: string, value: boolean | string) => {
